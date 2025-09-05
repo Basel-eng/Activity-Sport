@@ -1,0 +1,66 @@
+@import "tailwindcss";
+*{
+  box-sizing: border-box;
+}
+
+
+html,body {
+  background: #eee;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+@keyframes colorStyle{
+  0%{color: #ef4444}
+  50%{color: #3b82f6}
+  100%{color: #10b981}
+}
+.anination-text{
+  animation: colorStyle 6s ease-in-out infinite;
+}
+/* .div{
+  background-size: 100% 100%;
+  animation: slider 3s linear infinite;
+}
+@keyframes slider{
+  0%{background-image: url(../../public/img/carousel1.jpg)}
+  50%{background-image: url(../../public/img/carousel2.jpg)}
+  100%{background-image: url(../../public/img/carousel3.jpg)}
+} */
+
+@layer base {
+  .container {
+    @apply mx-auto px-4 md:px-6 lg:px-12 xl:px-14 overflow-x-hidden;
+
+  }
+}
+.disabled{
+  background-color: gray;
+}
+button:disabled{
+  cursor: not-allowed;
+}
+
+.word{animation: pulse 2s infinite;}
+@keyframes pulse{
+  0% , 100% {transform: scale(1);}
+  50% {transform: scale(1.2);}
+}
+.word{
+  .typewriter {
+    overflow: hidden;
+    border-right: 2px solid #000;
+    white-space: nowrap;
+    animation: typing 3s steps(20), blink 0.7s step-end infinite;
+    width: 0;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent }
+  }
+}
